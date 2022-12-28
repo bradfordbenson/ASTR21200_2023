@@ -6,7 +6,7 @@ from astropy.coordinates import SkyCoord
 from astropy.coordinates import AltAz
 from astropy.coordinates import EarthLocation
 
-### converts (Ra, Dec, JD) to (Az, Alt, UTC) for Mt. Stony Brook
+### converts (Ra, Dec, JD) to (Az, Alt, UTC) for Stone Edge Observatory
 
 # the first argument is the name of the input file (text file, 3 columns: Ra, Dec, JD)
 # the second argument is the name of the output file (text file, 3 columns: azimuth, altitude, UTC)
@@ -14,8 +14,8 @@ from astropy.coordinates import EarthLocation
 input=sys.argv[1]
 output=sys.argv[2]
 
-# location of Stony Brook
-observing_location = EarthLocation(lat=40.914224*u.deg, lon=-73.11623*u.deg, height=0)
+# location of Stone Edge Obsesrvatory
+observing_location = EarthLocation(lat=38.2887*u.deg, lon=-122.5040*u.deg, height=0)
 
 # read in the input file
 transits=numpy.loadtxt(input)

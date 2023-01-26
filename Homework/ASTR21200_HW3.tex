@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{fullpage}
+%\usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+
+\title{ASTR21200: Observational Techniques in Astrophysics}
+%\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+% Modify header here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rhead{\footnotesize ASTR 21200: Observational Techniques in Astrophysics}
+
+\begin{document}
+%\maketitle
+%\section{}
+%\subsection{}
+
+\parindent 0 pt
+\parskip 12 pt
+
+%\begin{center}
+%{\large{ASTR21200: Observational Techniques}}
+%\end{center}
+
+%\title{ASTR21200: Observational Techniques}
+
+% First Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large{ASTR21200: Homework 3 (HW3)}}
+
+\begin{enumerate} 
+\itemsep 0.5em
+\item {\bf \LaTeX\,:} I want you to become familiar with the text editing software \LaTeX, which you can use for the last lab (Lab-3) and can read more about on the class wiki\footnote{https://github.com/bradfordbenson/ASTR21200\_2023/wiki/Latex}.  From the wiki instructions, download the example.tex file.  For this problem, you will modify this file, to include information about the object you analyzed in Lab-1, and produce an updated report (generated from \LaTeX) describing your object.  To do this, you will follow the steps below, including any elements in the paper described in each step. 
+\begin{enumerate}[label=(\alph*)]
+\item From the instructions on the class wiki, download the \verb|example.tex| file, read and compile it, i.e., producing an \verb|example.pdf| file.  You can either do this on your computer, or with a web-based interface, like overleaf. 
+\item From the object that was observed for Lab-1, look up two references for your object, which you can find via NED or Simbad.  Read the Abstracts from those two papers. 
+\item Write a short paragraph about the object, summarizing the conclusions from these two papers, and include it in the tex file.    
+\item In your paragraph, make sure to include the references to your papers via BibTex, and use \verb|\citep| and \verb|\citet| (see wiki instructions, if you have questions).  
+\item Include an image of your object as a Figure in the paper, include a caption.   You can either include the flux-calibrated image that you produced in Lab-1, or one of your favorites figures from one of the papers you looked up.  
+\item Submit the \LaTeX\, compiled paper.
+\end{enumerate}
+
+\item {\bf Poisson statistics and Error Propogation:}  The Poisson distribution describes the probability to observe $x$ events during a certain measurement interval, given a mean rate $\mu$:
+\be
+P_P (x | \mu) = \frac{\mu^x}{x!} e^{-\mu}
+\ee
+\begin{enumerate}[label=(\alph*)]
+\item During your first observation, you measured $N = 2,500$ photons from the object (with a negligible sky brightness).  What is the uncertainty on this measurement?   
+\item During your second observation, you increase the exposure time, such that you now measured $N = 10,000$ photons from the object (with a negligible sky brightness).  What is the uncertainty on this measurement?   
+\item You now want to coadd these two observations, what is the uncertainty on the total number of photons from the object in this coadded observation?
+\item You repeat the second observation, using the same exposure time, what is the probability that you measure more than 10,300 photons from the object?   What is the probability that you measure more than 10,500 photons from the object?  State your reasoning.  
+\item You repeat the second observation on the following night, however now the sky brightness is much worse, and contributing $N = 20,000$ photons from sky brightness alone (in addition to the expected $N = 10,000$ photons from the object).  After subtracting off the estimated sky brightness, you again measure $N = 10,000$ photons from the object.  What is the uncertainty on the photon counts from the object with this measurement? 
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
